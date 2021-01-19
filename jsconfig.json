@@ -1,0 +1,11 @@
+/**
+ * this file is for the vs code to know where to import files
+ */
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": "src"
+  },
+  "exclude": ["node_modules"]
+}
