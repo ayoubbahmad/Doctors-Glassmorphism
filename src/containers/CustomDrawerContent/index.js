@@ -42,7 +42,7 @@ export default function CustomDrawerContent(props) {
             borderColor: '#fff',
           }}
           blurType="light"
-          blurAmount={10}
+          blurAmount={5}
           reducedTransparencyFallbackColor="white"
         >
           <DrawerItemList {...props} />
