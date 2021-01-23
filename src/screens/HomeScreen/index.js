@@ -1,87 +1,26 @@
-import React from 'react';
-
-import { View, Image, Text, StyleSheet, Dimensions } from 'react-native';
 import { BlurView } from '@react-native-community/blur';
-import { FlatList, TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import LinearGradient from 'react-native-linear-gradient';
+import Header from 'components/Header';
 import DoctorsList from 'containers/DoctorsList';
 import RecomendedDoctorsList from 'containers/RecomendedDoctorsList';
+import React from 'react';
+import { Dimensions, StyleSheet, View } from 'react-native';
+import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import LinearGradient from 'react-native-linear-gradient';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const { width: WIDTH } = Dimensions.get('window');
 
 // '#62BDC2', '#25305E', '#EDEFF1', '#DAD0C6', '#578DB0'
 
-const Header = () => {
-  const insets = useSafeAreaInsets();
-  const navigation = useNavigation();
-
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        width: '100%',
-        position: 'absolute',
-        top: insets.top,
-        padding: 16,
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
-      <TouchableOpacity
-        onPress={navigation.toggleDrawer}
-        style={{
-          padding: 4,
-        }}
-      >
-        {/* <BlurView
-          style={{
-            paddingVertical: 4,
-            paddingHorizontal: 8,
-            borderRadius: 12,
-            // borderWidth: 1,
-            // borderColor: '#fff',
-          }}
-          blurType="light"
-          blurAmount={10}
-          reducedTransparencyFallbackColor="white"
-        > */}
-        <Ionicons name="reorder-three-outline" size={36} color="#25305E" />
-        {/* </BlurView> */}
-      </TouchableOpacity>
-
-      <Text style={{ fontWeight: '500', fontSize: 16, color: '#25305E' }}>Home</Text>
-
-      <Image
-        source={require('assets/icons/avatarDoctor.png')}
-        style={{ borderRadius: 16 }}
-        height={40}
-        width={40}
-      />
-    </View>
-  );
-};
-
 export default function HomeScreen() {
-  const navigation = useNavigation();
   const insets = useSafeAreaInsets();
   return (
     <View style={styles.container}>
-      {/* <Image
-        key={'blurryImage'}
-        // source={require('assets/images/background/background2.jpg')}
-        source={{ uri: uri6 }}
-        style={styles.absolute}
-        blurRadius={32}
-      /> */}
-
       <LinearGradient
         colors={['#62BDC2', '#EDEFF1', '#25305E', '#DAD0C6', '#578DB0']}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
-        // locations={[4, 3, 2, 1, 0]}
         style={styles.absolute}
       />
 
@@ -138,9 +77,7 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* <View style={{}}> */}
       <DoctorsList />
-      {/* </View> */}
 
       <BlurView
         blurType="light"
@@ -150,9 +87,6 @@ export default function HomeScreen() {
           borderRadius: 30,
           overflow: 'hidden',
           flexGrow: 1,
-          // marginBottom: Math.max(insets.bottom + 80, 80),
-          // marginTop: Math.max(insets.top + 72, 72),
-          // marginTop: 12,
           width: WIDTH,
           marginHorizontal: 12,
         }}
@@ -172,7 +106,6 @@ export default function HomeScreen() {
           <RecomendedDoctorsList />
         </LinearGradient>
       </BlurView>
-      {/* </View> */}
     </View>
   );
 }

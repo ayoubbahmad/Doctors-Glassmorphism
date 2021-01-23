@@ -1,11 +1,9 @@
-import React from 'react';
-
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import HomeScreen from 'screens/HomeScreen';
-import DetailsScreen from 'screens/DetailsScreen';
 import CustomDrawerContent from 'containers/CustomDrawerContent';
-import BottomTabRouter from 'routers/BottomTabRouter';
+import React from 'react';
 import { StyleSheet } from 'react-native';
+import BottomTabRouter from 'routers/BottomTabRouter';
+import DetailsScreen from 'screens/DetailsScreen';
 
 const Drawer = createDrawerNavigator();
 

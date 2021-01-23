@@ -1,13 +1,11 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import CustomTabBar from 'containers/CustomTabBar';
 import React from 'react';
-import DetailsScreen from 'screens/DetailsScreen';
-import HomeScreen from 'screens/HomeScreen';
-
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import ChatScreen from 'screens/ChatScreen';
-import NotificationsScreen from 'screens/NotificationsScreen';
+import HomeScreen from 'screens/HomeScreen';
 import MedicalAidScreen from 'screens/MedicalAidScreen';
+import NotificationsScreen from 'screens/NotificationsScreen';
 
 const Tab = createBottomTabNavigator();
 

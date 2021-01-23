@@ -1,6 +1,6 @@
 import { BlurView } from '@react-native-community/blur';
 import React from 'react';
-import { View, Text, Dimensions, Image, ImageBackground } from 'react-native';
+import { Dimensions, Image, Text, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 import Fontisto from 'react-native-vector-icons/Fontisto';
